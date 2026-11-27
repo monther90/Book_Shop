@@ -17,7 +17,7 @@ namespace Book_Shop.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.0")
+                .HasAnnotation("ProductVersion", "10.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -126,6 +126,58 @@ namespace Book_Shop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Robert C. Martin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "George Orwell"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "J. K. Rowling"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Agatha Christie"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Yuval Noah Harari"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "James Clear"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Stephen King"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Paulo Coelho"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Mark Manson"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Morgan Housel"
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.Book", b =>
@@ -199,6 +251,338 @@ namespace Book_Shop.Migrations
                     b.HasIndex("PublisherId");
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            CategoryId = 3,
+                            Description = "A handbook of agile software craftsmanship.",
+                            FlashSaleId = 1,
+                            FlashSalePrice = 18m,
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 10,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 30m,
+                            PublicationYear = 2008,
+                            PublisherId = 1,
+                            StockQuantity = 25,
+                            Title = "Clean Code"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 2,
+                            CategoryId = 1,
+                            Description = "A dystopian novel about surveillance and totalitarianism.",
+                            FlashSaleId = 1,
+                            FlashSalePrice = 15m,
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 10,
+                            IsBestSeller = true,
+                            IsRecommended = false,
+                            Price = 18m,
+                            PublicationYear = 1949,
+                            PublisherId = 1,
+                            StockQuantity = 30,
+                            Title = "1984"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AuthorId = 3,
+                            CategoryId = 1,
+                            Description = "The first book in the Harry Potter fantasy series.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = true,
+                            IsRecommended = false,
+                            Price = 22m,
+                            PublicationYear = 1997,
+                            PublisherId = 2,
+                            StockQuantity = 40,
+                            Title = "Harry Potter and the Philosopher's Stone"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AuthorId = 4,
+                            CategoryId = 7,
+                            Description = "A detective novel featuring Hercule Poirot.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = true,
+                            IsRecommended = false,
+                            Price = 20m,
+                            PublicationYear = 1934,
+                            PublisherId = 3,
+                            StockQuantity = 18,
+                            Title = "Murder on the Orient Express"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AuthorId = 5,
+                            CategoryId = 4,
+                            Description = "A brief history of humankind.",
+                            FlashSaleId = 2,
+                            FlashSalePrice = 22m,
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 8,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 28m,
+                            PublicationYear = 2011,
+                            PublisherId = 1,
+                            StockQuantity = 22,
+                            Title = "Sapiens"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AuthorId = 6,
+                            CategoryId = 6,
+                            Description = "A practical guide to building good habits.",
+                            DiscountPrice = 20m,
+                            FlashSaleId = 2,
+                            FlashSalePrice = 18m,
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 8,
+                            IsBestSeller = true,
+                            IsRecommended = true,
+                            Price = 24m,
+                            PublicationYear = 2018,
+                            PublisherId = 1,
+                            StockQuantity = 35,
+                            Title = "Atomic Habits"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AuthorId = 7,
+                            CategoryId = 1,
+                            Description = "A horror novel set in an isolated hotel.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 23m,
+                            PublicationYear = 1977,
+                            PublisherId = 3,
+                            StockQuantity = 15,
+                            Title = "The Shining"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AuthorId = 8,
+                            CategoryId = 1,
+                            Description = "A philosophical novel about following your dreams.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = true,
+                            IsRecommended = false,
+                            Price = 17m,
+                            PublicationYear = 1988,
+                            PublisherId = 1,
+                            StockQuantity = 32,
+                            Title = "The Alchemist"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AuthorId = 9,
+                            CategoryId = 6,
+                            Description = "A counterintuitive approach to living a better life.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 21m,
+                            PublicationYear = 2016,
+                            PublisherId = 2,
+                            StockQuantity = 27,
+                            Title = "The Subtle Art of Not Giving a F*ck"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AuthorId = 10,
+                            CategoryId = 5,
+                            Description = "Timeless lessons on wealth, greed and happiness.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 19m,
+                            PublicationYear = 2020,
+                            PublisherId = 1,
+                            StockQuantity = 28,
+                            Title = "The Psychology of Money"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AuthorId = 1,
+                            CategoryId = 3,
+                            Description = "A guide to practical software development.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 32m,
+                            PublicationYear = 1999,
+                            PublisherId = 4,
+                            StockQuantity = 20,
+                            Title = "The Pragmatic Programmer"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AuthorId = 2,
+                            CategoryId = 1,
+                            Description = "A political allegory about power and corruption.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 15m,
+                            PublicationYear = 1945,
+                            PublisherId = 1,
+                            StockQuantity = 25,
+                            Title = "Animal Farm"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AuthorId = 3,
+                            CategoryId = 1,
+                            Description = "The second adventure at Hogwarts.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 23m,
+                            PublicationYear = 1998,
+                            PublisherId = 2,
+                            StockQuantity = 30,
+                            Title = "Harry Potter and the Chamber of Secrets"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AuthorId = 4,
+                            CategoryId = 7,
+                            Description = "A mystery novel about ten strangers on an island.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = true,
+                            IsRecommended = false,
+                            Price = 19m,
+                            PublicationYear = 1939,
+                            PublisherId = 3,
+                            StockQuantity = 24,
+                            Title = "And Then There Were None"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AuthorId = 5,
+                            CategoryId = 4,
+                            Description = "An exploration of the future of humanity.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 27m,
+                            PublicationYear = 2015,
+                            PublisherId = 1,
+                            StockQuantity = 18,
+                            Title = "Homo Deus"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AuthorId = 6,
+                            CategoryId = 6,
+                            Description = "Rules for focused success in a distracted world.",
+                            DiscountPrice = 19m,
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 22m,
+                            PublicationYear = 2016,
+                            PublisherId = 4,
+                            StockQuantity = 26,
+                            Title = "Deep Work"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AuthorId = 7,
+                            CategoryId = 1,
+                            Description = "A horror story about a terrifying presence in a small town.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 29m,
+                            PublicationYear = 1986,
+                            PublisherId = 3,
+                            StockQuantity = 12,
+                            Title = "It"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            AuthorId = 8,
+                            CategoryId = 1,
+                            Description = "A novel about spiritual discovery and personal growth.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 18m,
+                            PublicationYear = 1990,
+                            PublisherId = 1,
+                            StockQuantity = 20,
+                            Title = "Brida"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            AuthorId = 9,
+                            CategoryId = 6,
+                            Description = "A book about hope and the human condition.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = false,
+                            Price = 20m,
+                            PublicationYear = 2019,
+                            PublisherId = 2,
+                            StockQuantity = 22,
+                            Title = "Everything Is F*cked"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            AuthorId = 10,
+                            CategoryId = 5,
+                            Description = "A guide to what never changes in a changing world.",
+                            FlashSaleSoldQuantity = 0,
+                            FlashSaleStock = 0,
+                            IsBestSeller = false,
+                            IsRecommended = true,
+                            Price = 25m,
+                            PublicationYear = 2023,
+                            PublisherId = 1,
+                            StockQuantity = 16,
+                            Title = "Same as Ever"
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.Cart", b =>
@@ -269,6 +653,48 @@ namespace Book_Shop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Fiction"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Science"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Technology"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "History"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Business"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Self Development"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Mystery"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Romance"
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.FlashSale", b =>
@@ -300,6 +726,26 @@ namespace Book_Shop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FlashSales");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Special discounts on selected books",
+                            EndTime = new DateTime(2030, 12, 31, 23, 59, 59, 0, DateTimeKind.Unspecified),
+                            IsActive = true,
+                            StartTime = new DateTime(2026, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Weekend Book Deals"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Limited offers on popular books",
+                            EndTime = new DateTime(2030, 12, 31, 23, 59, 59, 0, DateTimeKind.Unspecified),
+                            IsActive = true,
+                            StartTime = new DateTime(2026, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Best Sellers Sale"
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.Order", b =>
@@ -429,6 +875,32 @@ namespace Book_Shop.Migrations
                         .IsUnique();
 
                     b.ToTable("PromoCodes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "WELCOME10",
+                            DiscountPercentage = 10m,
+                            ExpiryDate = new DateTime(2030, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "BOOK20",
+                            DiscountPercentage = 20m,
+                            ExpiryDate = new DateTime(2030, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "READ15",
+                            DiscountPercentage = 15m,
+                            ExpiryDate = new DateTime(2030, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = true
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.Publisher", b =>
@@ -447,6 +919,33 @@ namespace Book_Shop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Publishers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Penguin Random House"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "HarperCollins"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Simon & Schuster"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Macmillan Publishers"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Hachette Book Group"
+                        });
                 });
 
             modelBuilder.Entity("Book_Shop.Models.Review", b =>
